@@ -14,6 +14,10 @@ const App = () => {
     return (
         <>
             <h1>A short Naration of Lorem Ipsum</h1>
+            <h4>
+                Below contains a title and body gotten from a random API ,
+                Please take your time to review
+            </h4>
             {isLoading === "loading" && <h4>Loading...</h4>}
             {isLoading === "idle" && (
                 <div
