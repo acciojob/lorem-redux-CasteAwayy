@@ -40,7 +40,10 @@ const App = () => {
                                             excepturi optio reprehenderit
                                         </p>
                                         <p className="body">
-                                            <b>Body :</b>quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto
+                                            <b>Body :</b>
+                                            {
+                                                "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+                                            }
                                         </p>
                                     </li>
                                 );
