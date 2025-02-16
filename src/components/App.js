@@ -11,56 +11,37 @@ const App = () => {
     useEffect(() => {
         dispatch(created());
     }, []);
-    if (isLoading == "loading") return <p>Loading....</p>;
+    if (isLoading == "loading") return <h4>Loading....</h4>;
     return (
-        <div
-            style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(2,1fr)",
-                gap: "1rem",
-            }}
-        >
-            {randomData &&
-                randomData.map((item, idx) => {
-                    return (
-                        <div style={{ border: "1px solid black" }} key={idx}>
-                            <p>
-                                <b>Title: </b> {item.title}
-                            </p>
-                            <p>
-                                <b>Body: </b> {item.content}
-                            </p>
-                        </div>
-                    );
-                })}
-
-            {/* <div>
-                <p>
-                    <b>Title: </b> this is title
-                </p>
-                <p>
-                    <b>Body: </b> this is title
-                </p>
+        <>
+            <h1>A short naration of Lorem ispum</h1>
+            <div
+                style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(2,1fr)",
+                    gap: "1rem",
+                }}
+            >
+                <ul>
+                    {randomData &&
+                        randomData.map((item, idx) => {
+                            return (
+                                <li
+                                    style={{ border: "1px solid black" }}
+                                    key={idx}
+                                >
+                                    <p>
+                                        <b>Title: </b> {item.title}
+                                    </p>
+                                    <p>
+                                        <b>Body: </b> {item.content}
+                                    </p>
+                                </li>
+                            );
+                        })}
+                </ul>
             </div>
-
-            <div>
-                <p>
-                    <b>Title: </b> this is title
-                </p>
-                <p>
-                    <b>Body: </b> this is title
-                </p>
-            </div>
-
-            <div>
-                <p>
-                    <b>Title: </b> this is title
-                </p>
-                <p>
-                    <b>Body: </b> this is title
-                </p>
-            </div> */}
-        </div>
+        </>
     );
 };
 
