@@ -2,7 +2,7 @@ import { getData } from "./apiLorem";
 
 const initialState = [
     {
-        title: "Loading titles",
+        title: "Loading tiltes",
         body: "Loading Body",
     },
 ];
