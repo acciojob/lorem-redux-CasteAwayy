@@ -7,11 +7,9 @@ const App = () => {
     const dispatch = useDispatch();
     const { data, state: isLoading } = useSelector((state) => state);
     const [randomData] = data;
-    console.log(randomData);
     useEffect(() => {
         dispatch(created());
     }, []);
-    if (isLoading === "loading") return <h4>Loading</h4>;
     return (
         <>
             <h1>A short Naration of Lorem Ipsum</h1>
@@ -19,6 +17,7 @@ const App = () => {
                 Below Contains A title and Body gotten froma random API, Please
                 take your time to Review
             </h4>
+            {isLoading === "loading" && <h4>loading...</h4>}
             {isLoading === "idle" && (
                 <div
                     style={{
@@ -36,7 +35,9 @@ const App = () => {
                                         key={idx}
                                     >
                                         <p className="title">
-                                            <b>Title: </b> {item.title}
+                                            <b>Title :</b>sunt aut facere
+                                            repellat provident occaecati
+                                            excepturi optio reprehenderit
                                         </p>
                                         <p className="body">
                                             <b>Body: </b> {item.content}
