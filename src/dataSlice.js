@@ -2,7 +2,6 @@ import { getData } from "./apiLorem";
 
 const initialState = {
     data: [],
-    state: "idle",
 };
 
 function dataReducer(state = initialState, action) {
@@ -11,12 +10,6 @@ function dataReducer(state = initialState, action) {
             return {
                 ...state,
                 data: [...state.data, action.payload],
-                state: "idle",
-            };
-        case "data/progress":
-            return {
-                ...state,
-                state: action.payload,
             };
         default:
             return { ...state };
@@ -25,7 +18,7 @@ function dataReducer(state = initialState, action) {
 
 export function created() {
     return function (dispatch, getState) {
-        dispatch({ type: "data/progress", payload: "loading" });
+        // dispatch({ type: "data/progress", payload: "loading" });
         getData().then((data) => {
             dispatch({ type: "data/created", payload: data });
         });

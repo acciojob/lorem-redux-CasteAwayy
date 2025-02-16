@@ -1,7 +1,7 @@
-const URL = "https://fakerapi.it/api/v2/texts?_quantity=10&_characters=250";
+const URL = "https://jsonplaceholder.typicode.com/posts";
 
 export function getData() {
     return fetch(URL)
         .then((res) => res.json())
-        .then((data) => data.data);
+        .then((data) => data);
 }
