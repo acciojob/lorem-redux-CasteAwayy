@@ -1,18 +1,18 @@
 import { getData } from "./apiLorem";
 
-const initialState = {
-    data: [],
-};
+const initialState = [
+    {
+        title: "Loading titles",
+        body: "Loading Body",
+    },
+];
 
 function dataReducer(state = initialState, action) {
     switch (action.type) {
         case "data/created":
-            return {
-                ...state,
-                data: [...state.data, action.payload],
-            };
+            return action.payload;
         default:
-            return { ...state };
+            return state;
     }
 }
 

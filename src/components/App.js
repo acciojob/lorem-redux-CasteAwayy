@@ -5,9 +5,8 @@ import { created } from "../dataSlice";
 
 const App = () => {
     const dispatch = useDispatch();
-    const { data } = useSelector((state) => state);
-    const [postsData] = data;
-    console.log(postsData);
+    const  data  = useSelector((state) => state);
+    console.log(data);
     useEffect(() => {
         dispatch(created());
     }, []);
@@ -21,8 +20,8 @@ const App = () => {
                 </h4>
             </div>
             <ul>
-                {postsData &&
-                    postsData.map((post, idx) => {
+                 {data &&
+                    data.map((post, idx) => {
                         return (
                             <li key={idx}>
                                 <div className="title">
