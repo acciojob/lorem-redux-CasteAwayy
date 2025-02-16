@@ -11,6 +11,7 @@ const App = () => {
     useEffect(() => {
         dispatch(created());
     }, []);
+    if (isLoading === "loading") return <h4>Loading</h4>;
     return (
         <>
             <h1>A short Naration of Lorem Ipsum</h1>
@@ -18,7 +19,6 @@ const App = () => {
                 Below Contains A title and Body gotten froma random API, Please
                 take your time to Review
             </h4>
-            {isLoading === "loading" && <h4>Loading...</h4>}
             {isLoading === "idle" && (
                 <div
                     style={{
