@@ -14,7 +14,7 @@ const App = () => {
     if (isLoading == "loading") return <h4>Loading....</h4>;
     return (
         <>
-            <h1>A short naration of Lorem ispum</h1>
+            <h1>A short Naration of Lorem Ipsum</h1>
             <div
                 style={{
                     display: "grid",
