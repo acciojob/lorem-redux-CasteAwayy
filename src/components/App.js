@@ -15,8 +15,8 @@ const App = () => {
         <>
             <h1>A short Naration of Lorem Ipsum</h1>
             <h4>
-                Below contains a title and body gotten from a random API ,
-                Please take your time to review
+                Below Contains A title and Body gotten froma random API, Please
+                take your time to Review
             </h4>
             {isLoading === "loading" && <h4>Loading...</h4>}
             {isLoading === "idle" && (
@@ -35,10 +35,10 @@ const App = () => {
                                         style={{ border: "1px solid black" }}
                                         key={idx}
                                     >
-                                        <p>
+                                        <p className="title">
                                             <b>Title: </b> {item.title}
                                         </p>
-                                        <p>
+                                        <p className="body">
                                             <b>Body: </b> {item.content}
                                         </p>
                                     </li>
