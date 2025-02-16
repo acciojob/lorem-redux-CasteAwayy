@@ -40,7 +40,11 @@ const App = () => {
                                             excepturi optio reprehenderit
                                         </p>
                                         <p className="body">
-                                            <b>Body: </b> {item.content}
+                                            <b>Body :</b>quia et suscipit
+                                            recusandae consequuntur expedita et
+                                            cum reprehenderit molestiae ut ut
+                                            quas totam nostrum rerum est autem
+                                            sunt rem eveniet architecto
                                         </p>
                                     </li>
                                 );
